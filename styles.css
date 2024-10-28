@@ -1,0 +1,96 @@
+:root{
+    --texto: #22211f;
+    --background: #d7d7d2;
+    --primario: #686844;
+}
+@font-face {
+    font-family: 'Nombre-de-la-Fuente';
+    src: url('ruta/relativa/a/fonts/archivo-de-la-fuente.ttf') format('formato-de-la-fuente');
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+    
+}
+.typing-animation {
+    font-family: 'Cursive', sans-serif; /* Puedes cambiar la fuente según la que se asemeje a la imagen */
+    font-size: 2.5em;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(20, end), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: black;
+    }
+}
+header{
+    background-color: (var(--background));
+    height: 100px;
+}
+.logoAnimation {
+    width: 20%;
+    height: 80px;
+}
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 15s ease forwards;
+    fill: (var(--texto));
+    stroke: (var(--texto)); 
+}
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+text {
+    font-family: 'Ingrid Darling', cursive;
+}
+main{
+    background-color: var(--background);
+    margin: 20px;
+    height: 700px;
+}
+footer{
+    background-color: white;
+    height: 100px;
+}
+.tituloProyectos{
+    font-size: 7rem;
+    color: whitesmoke;
+    filter: drop-shadow(0 0 10px grey); 
+    position: relative;
+    margin-top:-30px ;
+}
+.cajaNormal{
+    
+    height: 30vh;
+    width: 30vw;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 -8px 15px rgba(0, 0, 0, .85);
+    
+    
+}

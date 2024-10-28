@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap" rel="stylesheet">
+    <title>SVG Text Animation with Ingrid Darling</title>
+    <style>
+        svg {
+            width: 100%;
+            height: 200px;
+        }
+        .path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 15s ease forwards;
+            fill: #ee0896; /* Color del texto */
+            stroke: #ee0896; /* Color del trazo */
+        }
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        text {
+            font-family: 'Ingrid Darling', cursive;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+        <text x="10%" y="50%" font-size="48" fill="none" stroke="black" stroke-width="2">
+            <tspan class="path" dy=".35em">Lia Medina</tspan>
+        </text>
+    </svg>
+</body>
+</html>
